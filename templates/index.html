@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+
+<h1>FLOR EN TRANSITO</h1>
+<label for="">Producto
+<select name="" id="">
+    {{prod | safe}}
+</select>
+</label>
+<label for="">Fecha de Corte
+    <input type="date">
+</label>
+<div class="scroll-container">
+<hr class="custom-divider">
+{{ df | safe }}
+</div>

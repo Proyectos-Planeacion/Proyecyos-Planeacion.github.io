@@ -1,14 +1,7 @@
 <?php
 @include_once('conexion.php');
 
-// Consulta SQL
-$sql = "SELECT Producto, Color, Grado, SUM(`Flor Por Ingresar`) AS 'Flor Por Ingresar'
-FROM flor_en_transito 
-WHERE
-	`Flor Por Ingresar` <> 0
-	AND Producto = 'ROSE'
-GROUP BY Producto, Color, Grado;";
-$result = $mysqli->query($sql);
+
 
 ?>
 
@@ -20,7 +13,7 @@ $result = $mysqli->query($sql);
 </head>
 
 <body>
-
+    
     <h1>Flor En Transito</h1>
     <table>
         <tr>
@@ -88,7 +81,7 @@ td {
     color: #ddd;
 }
 
-/* Añadir un poco de estilo extra para hacerlo más atractivo */
+
 
 body {
     background-color: #252525;
@@ -118,6 +111,10 @@ tr:nth-child(even):hover td {
     background-color: #1a1a1a;
 }
 
+h1 {
+    color: white;
+    text-align: center; 
+}
 </style>
 
 
