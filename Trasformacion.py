@@ -28,8 +28,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html', df = tabla_html, prod = Productos )
+    return render_template('login.html' )
 
+@app.route("/tabla")
+def tabla():
+    return render_template('tabla.html', df = tabla_html, prod = Productos )
+
+@app.route("/menu")
+def menu():
+    return render_template('menu.html')
 
 
 if __name__ == '__main__':

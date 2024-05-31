@@ -1,3 +1,5 @@
+{% extends 'menu.html' %}
+{% block body %}
 <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
 
 <h1>FLOR EN TRANSITO</h1>
@@ -13,4 +15,5 @@
 <div class="scroll-container">
 <hr class="custom-divider">
 {{ df | safe }}
-</div>
+</div>  
+{% endblock %}
