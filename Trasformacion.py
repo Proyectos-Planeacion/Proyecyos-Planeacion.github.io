@@ -13,7 +13,7 @@ port="3306"
 
 
 df = pd.read_sql('SELECT * FROM flor_en_transito', con=conexion)
-# df = df[df["Producto"] == "ROSE"]
+df = df[df["Producto"] == "ROSE"]
 df = df[df["Flor Por Ingresar"] != 0]
 Productos = " <option value="">" + df["Producto"].unique() + "</option>"
 
