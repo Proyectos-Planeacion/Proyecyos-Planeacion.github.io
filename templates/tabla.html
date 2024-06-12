@@ -3,17 +3,20 @@
 <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
 
 <h1>FLOR EN TRANSITO</h1>
-<input type="checkbox" tabindex="1" style="width:20px" order="1358639" name="updord" id="updord" value="12189895">
-<label for="">Producto
-<select name="" id="">
+<form class="container" method="POST" action="{{url_for('get_product')}}">
+    <select name="producto" > 
     {{prod | safe}}
-</select>
-</label>
-<label for="">Fecha de Corte
-    <input type="date">
-</label>
-<div class="scroll-container">
+    </select>
+    <button type="submit" > Consultar </button>
+</form>
+
+
+
+<div class="scroll-container">  
+
+    
 <hr class="custom-divider">
+<h2 for="">{{select}}</h2>
 {{ df | safe }}
 </div>  
 {% endblock %}
